@@ -38,3 +38,19 @@ Stability -
 Good hardware support - hardware support , plug and play
 Portabilty - easy to  store the linx os
 Good GUI -
+
+Red hat  Linux  = Project based work
+Ubuntu = study purpose
+Carl Linux = cyber security
+CentOS =
+
+Certifications -
+
+RHCSA Red hat certified system adminstrator
+RHCE   Red hat certified engineer
+
+
+
+
+
+
