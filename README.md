@@ -51,6 +51,32 @@ RHCE   Red hat certified engineer
 
 
 
+DAY 2
+
+Virtual box intro
+
+Install oracle virtual box 6.1
+
+2 tpes of linux ystem
+
+Media Based - GUI and CLI
+
+Network based - Kickstart and PXE(pre boot execution environment)
+
+
+How the process happening in Virtual box
+
+Background process - we will be loading the kernel (VM linux) -- load to initramfs(initial ram file system) -- 
+
+Foreground process - start configuration 
+
+Installer - Anaconda will stored all the files into /root/anaconda.ks.cfg
+
+
+
+
+
+
 
 
 
