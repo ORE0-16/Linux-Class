@@ -106,6 +106,95 @@ remaining 11 gb we can use for partition.
 
 
 
+Basic commands in Linux - 
+
+[root@localhost~]#
+root - login user
+localhost - server name/host name
+~ = home directory of user
+# = shows root user
+
+
+for local user
+
+[jithu@localhost~]$
+
+~ = will shows the present working directory(pwd) (wherever the folder we are shows by that part)
+
+pwd = shows the full path ; if it is root pwd=/root ;for normal user pwd=/home/jithu
+cd  = change directory ; cd documents = [root@localhostdocuments]#
+
+command syntax
+
+command option argument   = option means what option u need to do with that command ; argument = target file/folder name
+
+ls -a Documents
+cat -l
+more -lh
+
+-a = hidden files
+-l = longlist
+
+
+1) ls - list the directories and files in your system.
+
+ls -l = long listing which provide you entire list about the files and direcotry 
+output of above command  - drw_r_x_r_x 2 root root 6 april 29 12:00 Documents
+divided into 9 fields =  d|rw_r_x_r_x| 2 |root |root| 6 |april 29| 12:00 |Documents
+
+d/- = indicates file /folder
+d = folder/directory
+- = file
+l = link file(copy of the file)
+
+rw_r_x_r_x = permission of the file
+
+3 types of permssion
+
+Read -r
+Write -w
+Execute  -x
+
+rw_= user
+r_x = group
+r_x = others
+
+2 = hard count
+if is a file itshows the no of copies
+if it is directory - it will show no of sub directories
+
+root = created user
+
+root = group
+
+6 = size of the file or folder
+
+Date
+Time
+File/directory name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
