@@ -70,7 +70,42 @@ Background process - we will be loading the kernel (VM linux) -- load to initram
 
 Foreground process - start configuration 
 
-Installer - Anaconda will stored all the files into /root/anaconda.ks.cfg
+Installer - Anaconda will stored all the files into /root/anaconda-ks.cfg
+
+File names are called here as Directory Hierarchy structure .
+
+Main directory is called root(/) which is having 25 sub folders which stores the commands, functions and kernel details
+
+/bin    -(binary)               - all the commands will be stored                            2 types of users = adminstrator(root) and normal
+/sbin   -(superbin)              -have all adminstrative user commands
+/etc    -(editable text config)  -stores all the configuration files
+/home   -                        -where we store all the resources of the normal user
+/root   -                        -for root users to store the resource
+/boot   -                        -stores booting files and linux kernel
+/dev    - (device)               -contain device information if any devices connected
+/var    -(variables)             - all the trouble shooting files,log files,mail queries
+/usr    -                        - to store the details of linux operating system, save operational files of linux
+/mnt    -
+/media  -                           both mnt and media used as mount point  (for floppy and USB)
+/proc   -(processing)            - stores the information  of system processing
+/opt    -(optional)               - if u install any third party softwares that informaton will store here
+/tmp    -(temp files)             -
+/sys    -                         -stores system information
+/lib    -(library)                -contains system libraries
+/srv    -(services)               -contain services information
+/run                              -will show active device information
+
+lost + found = it is a file used to repair the system by itself
+
+
+
+
+
+
+
+
+
+
 
 
 
