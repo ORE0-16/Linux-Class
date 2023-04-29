@@ -138,7 +138,7 @@ more -lh
 
 1) ls - list the directories and files in your system.
 
-ls -l = long listing which provide you entire list about the files and direcotry 
+2) ls -l = long listing which provide you entire list about the files and direcotry 
 output of above command  - drw_r_x_r_x 2 root root 6 april 29 12:00 Documents
 divided into 9 fields =  d|rw_r_x_r_x| 2 |root |root| 6 |april 29| 12:00 |Documents
 
@@ -172,6 +172,17 @@ root = group
 Date
 Time
 File/directory name
+
+
+3) ls -a   = to list the hidden files
+
+4) ls -t   = list files and directories based on modified time
+
+5) ls -r   = list in reverse order 
+
+we can comibine ls and option commands together  =  ls -la
+
+
 
 
 
