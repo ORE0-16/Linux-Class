@@ -55,7 +55,7 @@ DAY 2
 
 Virtual box intro
 
-Install oracle virtual box 6.1
+Install oracle virtual box 6.1 and redhatlnuxpackage
 
 2 tpes of linux ystem
 
@@ -96,6 +96,16 @@ Main directory is called root(/) which is having 25 sub folders which stores the
 /run                              -will show active device information
 
 lost + found = it is a file used to repair the system by itself
+
+
+root= 13
+boot = 500mb
+swap= 8gb
+
+remaining 11 gb we can use for partition.
+
+
+
 
 
 
