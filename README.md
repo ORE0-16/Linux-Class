@@ -307,7 +307,105 @@ touch     =   used to create empty files ;we can modify timestamps ; multiple fi
               
           
 
-vi        =
+vi        = Visual editor ; modified version of vi is called VIM 
+
+            #vi filename
+            
+            in vi we have 3 modes
+              1) Command mode
+              2) Insert mode
+              3) Extended mode
+              
+            first mode will be command mode we can only edit using keyboard shortcuts 
+            if you press I u can be in insert mode - where u can add data
+            
+            press esc + shift + : = will take you from insert mode to extended mode , in extended mode we can save and exit by giving :wq!
+            
+            pressing escape will take you to command mode first then by pressing shift+: it will take you to extended mode
+            
+         
+         
+ *******************************************************************************************************
+ 
+ mdir     = to create folders
+            #mkdir b{1..5}
+            #mkdir .filename
+            #mkdir maindirectory/subdirectory - to create sub folders 
+
+
+
+copy       = #cp source destination      ; destination file data get overriden if there is existing data
+
+move        = #mv source destination     ;   used to move data and renaming; if the destination file is not there the actual input file name gets change
+
+delete      = #rm filename               ;
+              #rm -d directory           ; to delete empty directory(dir without ny files)
+              #rm -r directory           ; to delete dir with some data 
+              
+              
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
