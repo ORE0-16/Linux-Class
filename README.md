@@ -135,6 +135,8 @@ more -lh
 -a = hidden files
 -l = longlist
 
+ls -lt = will list based on timestamp
+
 
 1) ls - list the directories and files in your system.
 
@@ -181,6 +183,145 @@ File/directory name
 5) ls -r   = list in reverse order 
 
 we can comibine ls and option commands together  =  ls -la
+
+
+
+_-----------------------------------------
+
+Day 3 - COmmands
+
+---------------------------------------------
+
+For reading files
+
+cat - to view the content of the file  
+
+more - it is like a book ,will show content page by page
+
+less  - shows content from last page to first page
+
+head  - #head -5/etc/password  = it will show first  5 lines
+
+tail  - it will show last 5 lines.
+
+
+**************************************************************
+
+To switch between the users
+
+su  - substitute user - to switch between users -
+
+[root@hostexample~]# su jithu  = [jithu@hostexampleroot]$  = here the present working directory will be root folder to change that use su - jithu
+
+su - jithu = [jithu@hostexample~]$       su - = login as root user
+
+sudo = if we are logged in as normal user and we need the preveliage of root user 
+
+
+******************************************************************
+
+to see the user details , all the below commands show the login user details
+
+w  = 
+
+who = 
+
+whoami
+
+logname
+
+
+*********************************************************************
+To see the Kernel details
+
+#uname -r  = shows the kernel version 
+
+#uname -v = more details about the version
+
+#uname -n
+#hostname
+#hostnamectl 
+
+all above 3 will give the details of hostname
+
+#tty = shows the terminal number
+
+
+*********************************************************************
+
+which  = find location   ; which cat = shows the path of cat command 
+
+whereis = find location of original file,copies,manual page etc  ; whereis cat = gives original page and manual page
+
+wc = word count - to find no of lines,no of words,no of characters  #wc etc/passerd   = 25 120 2300
+
+wc -l = only no of lines
+wc -w = only no of words
+wc -m = only no of characters
+
+
+man = man cat = will give the manual details 
+
+history  = whaterver history we have done , will show the details of last 48 commands
+
+!40 = will show you 40th command and its output
+
+history -c = to clear the history
+clear /Control L = to clear the page
+
+
+
+
+*********************************************************************
+
+Creation of files ; no special characters are allowed 
+
+cat       =   used for create and read file ; to create a text file ; but we cant modify existing data ; we can add data -appending
+              #cat>filename         ; 
+              #cat>abcd (press enter)
+              Welcome to redhat
+              hello programming   (press enter)
+              (press control + c) to come out of the file 
+              
+              if i again try to add one line to this file using the above steps the existing data will lost to avoid this we use apppending logic
+              
+              #cat>>abcd
+              hi hello
+              cntrl+C
+              
+              cat abcd
+              Welcome to redhat
+              hello prg
+              hi hello
+              
+              cat>.hiddenfile   = to create hidden file 
+              
+                     
+
+touch     =   used to create empty files ;we can modify timestamps ; multiple files ; we cannot pass data using touch
+              #touch filename - to create new file
+              
+              #touch existingfile  = to modify that file timestamp  = ls -l = to verify the timestamp changes
+              
+              #touch a{5..9}  = will create multiple file with name a5,a6,a7,a8,a9
+              
+          
+
+vi        =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
