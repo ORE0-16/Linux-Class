@@ -344,6 +344,93 @@ delete      = #rm filename               ;
               
               
               
+*****************************************************************************************************************
+
+Day 5 - 
+
+Partition in oracle virtul box
+
+/= 20GB
+/boot= 500 MB
+swap = 8GB
+
+
+USER and GROUP adminstrator.
+
+USER -
+UID - user identification number for users, but the system identifies these users by number 
+
+        0 - root
+        1-199= system users - system who uses the system
+        200-999 = reserved id 
+        1000-60,000 = normal user
+        
+        
+Configuration files - maninly used to storefiles
+      
+      /etc/passwd = it will store user information
+      /etcshadow =   it will store user password information
+      /etc/group =   it will store group information
+      /etc/gshadow=   it will store group password
+      /etc/login.defs = to save the login default files
+      /etc/skel = to save the login default files 
+
+
+cat
+
+/etc/passwd -
+jithu:x:1000:1000:jithu:/home/jithu:/bin/bash
+
+jithu - root user
+x - password
+1000- uid
+1000 - gid
+jithu - comments
+/home - home directory 
+/bin/bash  - shell
+
+cat/etc/shadow -
+
+jithu:xyxyxyxx:0:99999:7:::
+
+jithu - root
+xyxyxyxx- encrypted passwd
+0 - minimm days of password
+99999 - max days u can use the password
+7 - before 7 days of expiring u ll get start getting reminder mails
+
+cat/etc/group
+
+jithu:x:1000:
+
+jithu- grp name
+x- group passrd
+1000- gid
+4th byte - no of members
+
+cat /etc/gshadow
+
+jithu:!::
+
+jithu- group name
+! - password
+3rd - grp admin are there or not
+4th - no of users
+
+cat /etc/login.defs
+
+
+
+User admin -
+Group admin -
+
+
+
+
+
+
+              
+              
 
 
 
