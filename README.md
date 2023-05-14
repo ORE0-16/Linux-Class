@@ -143,7 +143,7 @@ ls -lt = will list based on timestamp
 2) ls -l = long listing which provide you entire list about the files and direcotry 
 output of above command  - drw_r_x_r_x 2 root root 6 april 29 12:00 Documents
 divided into 9 fields =  d|rw_r_x_r_x| 2 |root |root| 6 |april 29| 12:00 |Documents
-
+3) ls -l /  = to see the content inside / root folders
 d/- = indicates file /folder
 d = folder/directory
 - = file
@@ -424,6 +424,180 @@ cat /etc/login.defs
 User admin -
 Group admin -
 
+
+
+*************************************************************************************************************************
+
+Day 6 
+
+
+USER ADMINSTRATION -mainly covers 3 commands
+
+	useradd		- used to add new users
+	usermod		- used to modify
+	userdel  	- used to dellete
+	
+useradd - #useradd oreo
+			how to check the user is being created -  cat /etc/passwd  or ls -l /home
+		
+		2-to give password as root user for oreo
+		#passwd oreo
+		3- to give password from oreo account
+		#passwd 
+		
+usermod - #usermod oreo
+		1 -                      #usermod -u newuid	username
+				                 #usermod -u 4567 oreo = change uid oforeo to 4567
+				
+		2 - to change home directory
+				                 #usermod -d /new/directoty username  - eventhough u change the directory the home drectpry entry will be present in home
+		3- for locking the user  #usermod -L username
+		   for unlocking         #usermod -U username 
+		4- for modifying shell
+								 #usermod -s /bin/sh username 
+		5 - to rename user
+								 #usermod -l newname/oldname 
+								 
+		
+userdel 			
+		#userdel jithu   - jithu will deleted but home entry will present 
+		#userdel -r username - this will delete completely
+		
+	
+	
+
+GROUP ADMINSTRATION
+
+	1 - #groupadd groupname   			- to add new group  - cat /etc/group 
+	2 - #groupmod -g GID groupname  	- to change the group id
+	3 - #groupmod -n newname oldna  	- to change the group name
+	4 - #groups user /#groups user1,2,3 - to list user groups name
+	5 - #groupdel groupname 			- to delete the group
+	
+	
+PASSWORD AGING INFORMATION
+
+to see the passwd aging information of a user  - #chage -l jithu  - will show you default passwd details
+
+to change that  - #chage jithu   - give values
+
+PERMISSIONS 
+
+1)Basic permission
+2)Special permission
+3)ACL   = access control list
+
+
+BASIC PERMISSION  -
+
+
+we have 3 permissions  - Read Write Execute
+
+Read 	 	- r	- 4	(octa value)
+Write		- w	- 2
+Execute		- x	- 1
+
+rw-r--r--
+
+we have 3 ownerships
+
+user(u)  - rw-
+group(g) - r--
+others(o) - r--
+
+user /group/others means the user who created the file/folder, to which group it belongs, outsider can access or not
+
+
+Default permissions=  basic permision - Umask
+
+umask value for root user = 0022
+umask value for nor user  = 0002
+
+/etc/bashrc & /etc/profile will contains the information about the umask value 
+
+0022/0002 - 1st byte we can ignore =022/002
+
+max permision for files and folders
+
+file :666(rw-rw-rw-)				folders :777(rwxrwxrwx)
+
+--- 0
+--x 1
+-w- 2
+-wx 3
+r-- 4
+rw- 6
+r-x 5
+rwx 7
+
+for files the content will be text and dont need to execute access .
+
+below shown are the calculation for the default permissin for files and folders under root and normal users
+
+
+for root
+
+file    666-
+		022
+		----
+		644  = rw-r--r--
+		
+folder 	777-
+		022
+		----
+		755		= rwxr-xr-x
+		
+
+for normal
+
+file 	666-
+		002
+		----
+		664			= rw-rw-r--
+		
+folder
+		777-
+		002
+		----
+		775			= rwxrwxr-x
+		
+		
+for changing the default permission value we can use the command chmod
+
+#chmod whom what which file/folder
+
+
+whom = user/group/others
+what = +,-,=
+which = r,w,x
+file /folder
+
+chmod u+w a1   - will give the user execute acccess only for user
+
+chmod a+w a1  -  will give execute access to user,group and others in  a single command
+
+chmod a=x a1  - will give only execute access to user grp and others 
+
+also we can use octa values like
+
+chmod 123 a1   - will give --x-w--wx
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+	
+	
+	
 
 
 
