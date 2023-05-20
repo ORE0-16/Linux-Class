@@ -584,6 +584,75 @@ chmod 123 a1   - will give --x-w--wx
 
 
 
+------------------------------------------------------------------------------------------------------------------------------------
+
+Day 7
+
+Special Permissions
+
+3 types of special permissions
+
+1 - SET UID		= giving same permissions to multiple users  -check permission in ls -l /bin/passwd in root = u can see rwrs - s implies 
+					ex helping us to change password at any time 
+					how to add S mode  = chmod u + s /bin/passwd
+					
+2 - SET GID		= same as above ,difference is this is for groups ,by default the group name will be root now if i rename the group name to
+					jaba and create a file/dir inside jaba, the group name of that file/dir will shown as root only not jaba
+					to make it jaba we use SET GID
+					
+					chmod g+s 
+					
+3 - Sticky bit	=  official used social blogers, like everyone has the access ,but we cant have access to edit or update the file/folder
+
+
+
+
+The first byte of UMASK 0000 is given to Special permission
+
+
+ACL - Access control list permissions
+
+The owner can give permisions to particular user called ACL
+
+chmod 755 /home/*  - we are giving the access to all users
+
+try above command in root user
+login to one user create a file 
+login to another user and try to access the above file from that user home directory - u can see the file ; but u cannot edit the file
+
+setfacl -m u:oreo:rw:ac11   (user:whatpermission:filename)  - here we are giving read write access to oreo user on the file ac11 created under aj home dir
+
+if u want to delete the permission switch to main user = setfacl -b ac11
+getfacl filename  = shows who all other users have access to this file
+
+
+
+YUM = yellow dog update modifier 
+
+
+used to install the packages
+
+
+rpm - package management in redhat 
+
+yum to install and update packages and rpm for verification
+
+all packages are inside repository 
+
+
+we have 2 repository
+
+AppStream(all traditional packages) and BaseOs(core OS packages)  = these all are together called modules
+
+
+yum install nfs-utils  = before that we need to do one time setup chose iso file frm optical device then type below commnad
+
+mount /dev/cdrom /media
+df -h = to veriy
+now we need to install somesetup (jaba)
+
+
+
 
 
 
